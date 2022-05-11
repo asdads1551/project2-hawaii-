@@ -11,6 +11,11 @@ header{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    position: sticky;
+    top:0;
+    z-index: 5;
+    background-color: #FFF;
+    box-shadow: 0 8px 6px -6px black;
     div.logo{
         margin-left: 2rem;
         flex: 5 1 400px;
@@ -114,12 +119,25 @@ main{
                     font-size: 1.25rem;
                     margin: 1rem 0rem;
                 }
-                img{
-                    width:15vw;
-                    height: 15vw;
-                    border-radius: 50%;
-                    margin: 1rem 0rem;
-                }
+                div.image-container{
+                        overflow: hidden;
+                        width:15vw;
+                        height: 15vw;
+                        border-radius: 50%;
+                        margin: 1rem 0rem;
+                    img{
+                        width:15vw;
+                        height: 15vw;
+                        border-radius: 50%;
+                        transition: all 0.2s;
+                    }
+                    img:hover{
+                        transform: scale(1.2);
+                    }
+
+                   
+                }   
+                
             }    
         }
     }
@@ -169,6 +187,22 @@ footer{
         }
     }
  }
+ /*scroll bar setting*/
+ /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
 @media screen and (max-width:700px){
     main{
         section.second{
